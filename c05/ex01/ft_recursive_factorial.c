@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ytolstob <ytolstob@student.42barcel>       +#+  +:+       +#+        */
+/*   By: ytolstob <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/31 20:36:19 by ytolstob          #+#    #+#             */
-/*   Updated: 2023/10/31 21:56:54 by ytolstob         ###   ########.fr       */
+/*   Created: 2024/06/16 21:39:38 by ytolstob          #+#    #+#             */
+/*   Updated: 2024/06/16 22:29:59 by ytolstob         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_recursive_factorial(int nb)
 {
-	if (nb < 0)
+	if (nb < 0 || nb > 12)
 		return (0);
 	if (nb == 0 || nb == 1)
 		return (1);

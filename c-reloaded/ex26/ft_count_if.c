@@ -1,33 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
+/*   ft_count_if.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ytolstob <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/16 21:38:02 by ytolstob          #+#    #+#             */
-/*   Updated: 2024/06/16 22:29:17 by ytolstob         ###   ########.fr       */
+/*   Created: 2024/06/18 21:41:38 by ytolstob          #+#    #+#             */
+/*   Updated: 2024/06/18 22:08:10 by ytolstob         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-int	ft_iterative_factorial(int nb)
+int	ft_count_if(char **tab, int (*f)(char*))
 {
 	int	i;
-	int	res;
+	int	count;
 
-	i = 1;
-	res = 1;
-	if (nb < 0 || nb > 12)
-		return (0);
-	else
+	i = 0;
+	count = 0;
+	while (tab[i] != 0)
 	{
-		while (i <= nb)
+		if (f(tab[i]) != 1)
+			i++;
+		else
 		{
-			res = res * i;
+			count++;
 			i++;
 		}
 	}
-	return (res);
+	return (count);
 }
